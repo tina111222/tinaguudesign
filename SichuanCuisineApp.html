@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sichuan Cuisine App</title>
+ <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<style>
+    /* CSS 樣式設定 */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+	  flex: 1;
+	  
+	  align-items: stretch;
+	  flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+       flex:1;
+	  left: 20px;
+	  margin-top: 3%;
+      position: fixed;
+      height: 100%;
+    }
+
+	.sidebar ul {
+      list-style-type: none; /* 隱藏列表項目的分項符號 */
+			padding: 0; /* 取消預設的內邊距 */}
+	.sidebar a {
+      color: gray; /* 設定超連結字顏色為灰色 */
+      text-decoration: none; /* 取消超連結底線 */
+    }
+
+	 .sidebar a:hover {
+      color: black; /* 超連結文字在懸停時變為黑色 */
+    }
+		
+    
+		
+    .content {
+	  flex: 1;
+      margin-left: 10%; /* 與側邊欄寬度相同 */
+      padding: 4%;
+    }
+		 @media only screen and (max-width: 1125px) {
+      .sidebar {
+        display: none; /* 隱藏導航欄 */
+      }
+			 .content{
+				 margin-left: 0;
+			 }
+	   img {
+      max-width: 100%; /* 照片最大寬度設定為 100% */
+      height: auto; /* 高度自動調整，保持照片比例 */
+   }
+	
+			 container{
+				 text-align: center;
+				 
+			 }
+	  
+	
+	  .footer {
+      padding: 20px;
+		  
+    }
+	
+  </style>
+  </head>
+<body style="background-color: #f4f4f4">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light shadow-sm p-3 mb-5 bg-body rounded" style="background-color: #FFFFFF"> <a class="navbar-brand" href="index.html"><img src="images/cookie1.png" width="32" height="28" alt="cookie"/>&nbsp;&nbsp;YI TING'S WEBSITE</a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+	      <ul class="navbar-nav ml-auto">
+	        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
+	          <div class="dropdown-menu" style="background-color: #FFFFFF;border: none" aria-labelledby="navbarDropdown2"> <a class="dropdown-item" href="all.html">All</a> <a class="dropdown-item" href="UIUX Design.html">UI/UX Design</a><a class="dropdown-item" href="Visual Design.html">Visual Design</a><a class="dropdown-item" href="Sweets Online Store.html">Sweets Online Store</a>
+				</div>
+            </li>
+			<li class="nav-item"> <a class="nav-link" href="blog/name.html">Resume</a> </li>
+          </ul>
+    </div>
+  </nav>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	 <div class="container">
+    <div class="sidebar">
+      <!-- 左側導航欄內容 -->
+      <ul><h5>UI/UX Design</h5>
+        <li><a href="Sweets Web.html">Sweets Web</a></li>
+        <li><a href="MediaTek.html">Health Diary App</a></li>
+        <li><a href="SichuanCuisineApp.html" style="color:black">Sichuan Cuisine App</a></li>
+		<li><a href="index1.html">RWD響應式網頁實作</a></li>
+      </ul>
+    </div>
+	
+		 <div class="content">
+      <!-- 網頁內容 -->
+      
+      
+		   <div class="container-fluid">
+	  <div class="row justify-content-center">
+		  <div class="container justify-content-center" style="text-align: center;">
+			  <div class="row justify-content-center"><h4>Sichuan Cuisine App</h4></div>
+			  <div class="row justify-content-center"><h5>Illustration, Photoshop, Figma</h5></div>
+	   
+		 
+		   <div class="image" style="margin-top: 15px">
+	    <img src="images/Frame 30 -1.jpeg" alt="s1" width="100%" height="100%"/> 
+		</div>
+		<div class="image">
+			   <a href="https://youtu.be/gt2B-yEIfWc" target="_blank"><img src="images/Frame 30 -2.jpeg" width="100%" height="100%" alt="s2"></a>
+		    </div>
+		
+	    <div class="image">
+	    <img src="images/Frame 30 -3.jpeg" alt="s4" width="100%" height="100%"/> 
+		</div>
+			 
+		 <p><div class="video-container">
+    <div class="video-overlay"></div>
+		
+    <video src="video/smovie.mp4" width="100%" height="100%" controls></video>
+  </div>
+
+  <script>
+    // JavaScript 控制播放和停止影片
+    var videoContainer = document.querySelector('.video-container');
+    var videoOverlay = document.querySelector('.video-overlay');
+    var videoElement = document.querySelector('video');
+	 
+	
+
+    videoOverlay.addEventListener('click', function() {
+      videoElement.style.display = 'block'; // 顯示影片
+      videoElement.play(); // 播放影片
+      videoOverlay.style.display = 'none'; // 隱藏預覽圖層
+    });
+  </script>
+			   </p>
+			  
+			  
+			  
+	
+		 </div>
+		</div>
+		</div>	 
+    </div>
+	
+	  
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	 
+<div class="footer">
+	
+        <div class="text-center col-lg-6 offset-lg-3">
+            <h4>YI TING'S WEBSITE </h4>
+             <p>Copyright &copy; 2023 &middot; All Rights Reserved &middot; <a href="index.html" >My Website</a></p>
+	
+    </div>
+	</div>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UI/UX Design</title>
+ <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<style>
+    /* CSS 樣式設定 */
+ body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+	  flex-wrap: wrap;
+	  flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+       flex:1;
+	  left: 20px;
+	  margin-top: 3%;
+      position: fixed;
+      height: 100%;
+    }
+
+	.sidebar ul {
+      list-style-type: none; /* 隱藏列表項目的分項符號 */
+			padding: 0; /* 取消預設的內邊距 */}
+	.sidebar a {
+      color: gray; /* 設定超連結字顏色為灰色 */
+      text-decoration: none; /* 取消超連結底線 */
+    }
+
+	 .sidebar a:hover {
+      color: black; /* 超連結文字在懸停時變為黑色 */
+    }
+		
+    
+		
+    .content {
+	  flex: 1;
+      margin-left: 10%; /* 與側邊欄寬度相同 */
+      padding: 4%;
+    }
+		 @media only screen and (max-width: 1125px) {
+      .sidebar {
+        display: none; /* 隱藏導航欄 */
+      }
+			 .content{
+				 margin-left: 0;
+			 }
+			  img {
+        max-width: 110%; /* 圖片最大寬度設定為 50% */
+				  max-height: 50%;
+      }
+			 container{
+				 text-align: center;
+				 
+			 }
+			 
+	  .footer {
+      padding: 20px;
+    }
+	 
+    }
+  </style>
+  </head>
+<body style="background-color: #f4f4f4">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light shadow-sm p-3 mb-5 bg-body rounded" style="background-color: #FFFFFF"> <a class="navbar-brand" href="index.html"><img src="images/cookie1.png" width="32" height="28" alt="cookie"/>&nbsp;&nbsp;YI TING'S WEBSITE</a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+	      <ul class="navbar-nav ml-auto">
+	        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
+	          <div class="dropdown-menu" style="background-color: #FFFFFF;border: none" aria-labelledby="navbarDropdown2"> <a class="dropdown-item" href="all.html">All</a> <a class="dropdown-item" href="UIUX Design.html">UI/UX Design</a><a class="dropdown-item" href="Visual Design.html">Visual Design</a><a class="dropdown-item" href="Sweets Online Store.html">Sweets Online Store</a>
+				</div>
+            </li>
+			<li class="nav-item"> <a class="nav-link" href="blog/name.html">Resume</a> </li>
+          </ul>
+    </div>
+  </nav>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	 <div class="container">
+    <div class="sidebar">
+      <!-- 左側導航欄內容 -->
+      <ul><h5>UI/UX Design</h5>
+        <li><a href="Sweets Web.html">Sweets Web</a></li>
+        <li><a href="MediaTek.html">Health Diary App</a></li>
+        <li><a href="SichuanCuisineApp.html">Sichuan Cuisine App</a></li>
+		<li><a href="index1.html">RWD響應式網頁實作</a></li>
+      </ul>
+    </div>
+	
+		 
+		  <center>
+  <div class="content">
+      <!-- 網頁內容 -->
+      <h4>Works</h4>
+		  <br>
+	  
+	  <div class="container-md">
+	  <div class="row justify-content-center">
+		  
+	    <div class="row">
+		    <div class="col-md-6" style="margin-bottom: 15px;">
+			  <div class="card col-md-12; shadow-sm"  style="background-color: #FDFDFD;width: 80%;border:none"><img class="card-img-top " src="images/1new.jpeg" width="100%" height="100%" alt="powerofmeow" style="  margin-bottom: 5%;">
+			    <div class="card-body" style="text-align: left;">
+			      <h5 class="card-title">Sweets Web——甜點網站</h5>
+			      <p class="card-text">此網站分類清晰，讓人能快速購物，有團購功能，自動計算好每人的品項及價錢，重視細節與購買回饋，讓新客可以更瞭解商品。增加健康知識，讓顧客不要錯過健康美味的甜品。</p>
+			      <a href="Sweets Web.html" class="btn btn-primary" style="background-color:#a89780; border:none;">See More</a> </div>
+		      </div>
+            </div>
+		    <div class="col-md-6" style="margin-bottom: 15px">
+			  <div class="card col-md-12; shadow-sm"  style="background-color: #FDFDFD;width: 80%; border:none"><img class="card-img-top " src="images/Frame 109new.png" width="100%" height="100%" alt="m1" style="  margin-bottom: 5%;">
+			    <div class="card-body" style="text-align: left;">
+			      <h5 class="card-title">MediaTek——健康日記AP</h5>
+			      <p class="card-text">由聯發科晶片「MediaTek Sensio」為發想，調查智慧穿戴裝置使用情況後所設計。包含Logo及精簡頁面，競品分析後新增齊全的檢測及調整字體大小等友善全年齡層的優化設計。</p>
+			      <a href="MediaTek.html" class="btn btn-primary" style="background-color:#a89780; border:none">See More</a> </div>
+		     </div>
+		     </div>
+			<div class="col-md-6" style="margin-bottom: 15px">
+			  <div class="card col-md-12; shadow-sm"  style="background-color: #FDFDFD;width: 80%; border:none"><img class="card-img-top " src="images/Frame 14new.png" width="100%" height="100%" alt="s1" style="  margin-bottom: 5%;">
+			    <div class="card-body" style="text-align: left;">
+			      <h5 class="card-title">川在一起——點餐APP</h5>
+			      <p class="card-text">市面上的點餐app功能較不齊全或操作複雜，希望整合各種方便消費者的功能，方便訂位及聚餐時點餐，設計使人好想吃且操作既方便又多功能的川菜點餐app。</p>
+			      <a href="SichuanCuisineApp.html" class="btn btn-primary" style="background-color:#a89780; border:none">See More</a> </div>
+		      </div>
+            </div>
+		    <div class="col-md-6" style="margin-bottom: 15px">
+			  <div class="card col-md-12; shadow-sm"  style="background-color: #FDFDFD;width: 80%; border:none"><img class="card-img-top " src="images/rwd1new.png" width="100%" height="100%" alt="rwd" style="  margin-bottom: 5%;">
+			    <div class="card-body" style="text-align: left;">
+					<h5 class="card-title">RWD響應式網站實作</h5>
+			        <p class="card-text">使用 Bootstrap 4建立RWD響應式網頁。利用實作經驗熟悉HTML、CSS、JavaScript程式語言，以便掌握網頁設計的前端技術，並完成切版功能。</p>
+			        <a href="index1.html" class="btn btn-primary" style="background-color:#a89780; border:none">See More</a> 
+				</div>
+	          </div>
+	      </div>
+	    </div>
+
+	  </div>
+		
+		 
+	</div>
+	  
+    
+    </div>
+	  </center>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	 
+<div class="footer">
+	
+    <div class="text-center col-lg-6 offset-lg-3">
+            <h4>YI TING'S WEBSITE </h4>
+             <p>Copyright &copy; 2023 &middot; All Rights Reserved &middot; <a href="index.html" >My Website</a></p>
+	
+    </div>
+	</div>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>

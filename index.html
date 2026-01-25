@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YI TING'S WEBSITE</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	   <style>
+		.flex{
+		display: flex;	   
+		   }
+        .happy{
+          width: 100%;
+          margin: 10% 5% 10% 5%;
+          overflow: hidden; /* 避免長方框下面顯示不正常 */
+        }
+		.happy2{
+          width: 100%;
+          margin: 5% 1% 5% 15%;
+          overflow: hidden; /* 避免長方框下面顯示不正常 */
+        }
+        .bdcard{
+          width: 31%;
+          float:left; /* 圖片在左邊 */
+          padding: 3%;
+        }
+        .bdcard img{
+          display: block;
+		  margin: 17% 0% 5% -10%;
+          width:100%;
+        }
+        .bdtext{
+			
+          float: right;  /* 文字在右邊 */
+          width: 62%;
+		  margin: 0% 10% 5% -5%;
+          padding: 10% 5% 0% 0%;
+        }
+	
+		   .content {
+	  flex: 1;
+      margin-left: 0%; /* 與側邊欄寬度相同 */
+      padding: 4%;
+    }
+		 @media only screen and (max-width: 768px) {
+      
+			 .happy2{
+				 display: none;
+			 }
+			 .row{
+				   width: 100%;
+			   }
+			 .card col-md-12{
+				 width: 100%
+				 
+			 }
+		   }
+		   @media only screen and (min-width: 768px) {
+			   .happy{
+				   display: none;
+			   }
+			   
+		   }
+		   .main {
+　padding-bottom: 100px;
+}
+		   .footer {
+　height: 100px;
+　position: relative;
+　margin-top: -100px;
+}
+    </style>
+  </head>
+  <body style="background-color: #f4f4f4">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light shadow-sm p-3 mb-5 bg-body rounded" style="background-color: #FFFFFF"> <a class="navbar-brand" href="index.html"><img src="images/cookie1.png" width="32" height="28" alt=""/>&nbsp;&nbsp;YI TING'S WEBSITE</a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+	      <ul class="navbar-nav ml-auto">
+	        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
+	          <div class="dropdown-menu" style="background-color: #FFFFFF;border: none" aria-labelledby="navbarDropdown2"> <a class="dropdown-item" href="all.html">All</a> <a class="dropdown-item" href="UIUX Design.html">UI/UX Design</a><a class="dropdown-item" href="Visual Design.html">Visual Design</a><a class="dropdown-item" href="Sweets Online Store.html">Sweets Online Store</a>
+				</div>
+            </li>
+			<li class="nav-item"> <a class="nav-link" href="blog/name.html">Resume</a> </li>
+          </ul>
+    </div>
+  </nav>
+	  
+	<br>
+	<br>
+	  
+  
+  <!-- Content here -->
+	  <div class="flex">
+   <div class="col happy" style="border: none">
+   		<div class="row justify-content-center" style="margin-bottom: 20px">
+			<img src="images/Rectangle 1.png" alt="我" style="height: 100%; width: 100%;"/>
+	   </div>
+	   <div class="row justify-content-around">
+		   <h4 style="align-content: center">嗨，我是乙廷！</h4>
+	   </div>
+	   <div class="row justify-content-center">
+		   <p>擅長視覺設計、UI/UX設計，對用戶體驗和交互設計充滿熱情，閒暇時間會自行選題研究用戶需求，競品分析後利用Figma、Python實作多個網頁與app。藝術與造形設計學系的背景也讓我善於使用各種影像處理軟體。
+			<br>個性積極樂觀，擅長與人溝通，並有獨自經營網路商店的經驗，善於解決困難。</p>
+	   </div>
+	   <div class="row justify-content-center" style="margin-bottom: 4px;">
+	   		<img src="images/location-pin-alt-1.png" width="15" height="20" alt="地標"/>&nbsp;&nbsp;大台北地區</div>
+	   <div class="row justify-content-center" style="margin-bottom: 4px;">
+			<img src="images/mail-alt-3.png" width="17" height="17" alt="信"/>&nbsp;&nbsp;tina111222@gmail.com
+		  </div>
+	   <div class="row justify-content-center" style="margin-bottom: 4px;">
+		   <img src="images/phone.png" width="18" height="18" alt="phone"/>&nbsp;&nbsp;0972071510
+	   </div>
+   	    </div>	
+		
+		  <div class="happy2" style="border: none">
+      <div class="bdcard">
+        <img src="images/Rectangle 1.png" alt="我" />
+      </div>
+      <div class="bdtext">
+        <h4>嗨，我是乙廷！</h4>
+		  <br>
+        <p>擅長視覺設計、UI/UX設計，對用戶體驗和交互設計充滿熱情，閒暇時間會自行選題研究用戶需求，競品分析後利用Figma、Python實作多個網頁與app。藝術與造形設計學系的背景也讓我善於使用各種影像處理軟體。
+<br>個性積極樂觀，擅長與人溝通，並有獨自經營網路商店的經驗，善於解決困難。</p>
+		  <br>
+        <p><img src="images/location-pin-alt-1.png" width="15" height="20" alt="地標"/>&nbsp;&nbsp;大台北地區&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/mail-alt-3.png" width="17" height="17" alt="信"/>&nbsp;&nbsp;tina111222@gmail.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/phone.png" width="18" height="18" alt="phone"/>&nbsp;&nbsp;0972071510</p>
+      </div>
+	</div>	
+	  </div>
+	  
+	  <center>
+  <div class="content">
+      <!-- 網頁內容 -->
+	  <div class="row justify-content-center" style="margin-top: -30px">
+      <h4>Works</h4></div>
+	  <div class="row justify-content-center">
+      <img src="images/Component 4.png" width="50" height="50" alt="drop"/> </div>
+    <br>
+    <div class="container-md">
+	  <div class="row justify-content-center">
+		  
+	    <div class="row" style="width: 80%;">
+		    <div class="col-md-6" style="margin-bottom: 15px;">
+			  <div class="card col-md-12; shadow-sm"  style="background-color: #FDFDFD;width: 80%;border:none"><img class="card-img-top " src="images/1new.jpeg" width="100%" height="100%" alt="powerofmeow" style="  margin-bottom: 5%;">
+			    <div class="card-body" style="text-align: left;">
+			      <h5 class="card-title">Sweets Web——甜點網站</h5>
+			      <p class="card-text">此網站分類清晰，讓人能快速購物，有團購功能，幫助計算好每人的品項及價錢，重視商品細節展示與顧客回饋，讓新客更瞭解商品。增加健康知識相關文章，讓顧客不錯過健康美味的甜品。</p>
+			      <a href="Sweets Web.html" class="btn btn-primary" style="background-color:#a89780; border:none;">See More</a> </div>
+		      </div>
+            </div>
+		    <div class="col-md-6" style="margin-bottom: 15px">
+			  <div class="card col-md-12; shadow-sm"  style="background-color: #FDFDFD;width: 80%; border:none"><img class="card-img-top " src="images/Frame 32new.png" width="100%" height="100%" alt="powerofmeow" style="  margin-bottom: 5%;">
+			    <div class="card-body" style="text-align: left;">
+			      <h5 class="card-title">牛氖堂（FA入選獎）</h5>
+			      <p class="card-text">中藥文化整體創新設計，重視文化傳承，追求便利及新生代喜好的創意包裝設計，讓更多人主動認識中藥文化，並用牛奶糖之諧音設計品牌，使大眾能不畏懼中藥之苦，對品牌名稱琅琅上口。</p>
+			      <a href="niunaitang.html" class="btn btn-primary" style="background-color:#a89780; border:none">See More</a> </div>
+		     </div>
+		     </div>
+			<div class="col-md-6" style="margin-bottom: 15px">
+			  <div class="card col-md-12; shadow-sm"  style="background-color: #FDFDFD;width: 80%; border:none"><img class="card-img-top " src="images/Frame 109new.png" width="100%" height="100%" alt="powerofmeow" style="  margin-bottom: 5%;">
+			    <div class="card-body" style="text-align: left;">
+			      <h5 class="card-title">MediaTek——健康日記APP</h5>
+			      <p class="card-text">由聯發科晶片「MediaTek Sensio」為發想設計的健康日記。調查智慧穿戴裝置的使用後創造此App，設計Logo及精簡頁面，有齊全的檢測及調整字體大小等友善設計。</p>
+			      <a href="MediaTek.html" class="btn btn-primary" style="background-color:#a89780; border:none">See More</a> </div>
+		      </div>
+            </div>
+		    <div class="col-md-6" style="margin-bottom: 15px">
+			  <div class="card col-md-12; shadow-sm"  style="background-color: #FDFDFD;width: 80%; border:none"><img class="card-img-top " src="images/Frame 14new.png" width="100%" height="100%" alt="powerofmeow" style="  margin-bottom: 5%;">
+			    <div class="card-body" style="text-align: left;">
+					<h5 class="card-title">川在一起——川菜點餐APP</h5>
+			        <p class="card-text">市面上的點餐app功能較不齊全或操作複雜，因此希望可以整合各種方便消費者的功能來創造一個設計上使人好想吃且操作既方便又多功能的川菜點餐app。方便訂位及聚餐時點餐。</p>
+			        <a href="SichuanCuisineApp.html" class="btn btn-primary" style="background-color:#a89780; border:none">See More</a> 
+				</div>
+	          </div>
+	      </div>
+	    </div>
+
+	  </div>
+		
+		 
+	</div>
+    </div>
+	  </center>
+  <div class="main"><br></div>
+	  <br>
+	 
+	<div class="footer">
+	
+      <div class="text-center col-lg-6 offset-lg-3">
+            <h4>YI TING'S WEBSITE </h4>
+             <p>Copyright &copy; 2023 &middot; All Rights Reserved &middot; <a href="index.html" >My Website</a></p>
+	
+    </div>
+	</div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script>
+		<script src="js/bootstrap-4.4.1.js"></script>
+    <script>
+    function getScreenSize() {
+      var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+      // 在控制台输出实时宽度和高度
+      console.log('屏幕宽度：', screenWidth);
+      console.log('屏幕高度：', screenHeight);
+    }
+
+    // 监听窗口大小变化事件
+    window.addEventListener('resize', getScreenSize);
+
+    // 初始加载时获取屏幕大小
+    window.addEventListener('load', getScreenSize);
+  </script>
+	
+</body>
+</html>
