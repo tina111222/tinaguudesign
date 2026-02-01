@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body {
+    background-image: url(../img/cute_design_bg.png);
+    background-repeat: repeat-x;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+#apDiv1 {
+    font-size: medium;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Abril Fatface', cursive;
+}
+#apDiv2 {
+}
+.left {
+    width: 35%;
+    float: left;
+    height: 0%;
+}
+.right {
+    background-color: #EDDD57;
+    height: 27%;
+}
+.img-fluid {
+    width: 100%;
+    height: 100%;
+}
