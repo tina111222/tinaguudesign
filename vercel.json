@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/portfolio/graphic-design",
+        "destination": "/index.html"
+      }
+    ]
+  }

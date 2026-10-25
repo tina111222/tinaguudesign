@@ -1,0 +1,531 @@
+<html lang="en">
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study | Rakuten Card Campaign Page Upgrade</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/css/common.css" rel="stylesheet">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <nav id="site-navbar"
+        class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-transform duration-300 font-sans">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-start items-center gap-12">
+     
+            <a href="/" class="font-bold text-xl text-black no-underline hover:text-gray-600 transition-colors">
+                首頁
+            </a>
+
+            <div class="flex h-full space-x-8">
+
+                <div id="nav-portfolio-container" class="relative flex h-full items-center">
+
+                    <button id="btn-portfolio"
+                        class="font-medium text-black text-base no-underline hover:text-gray-600 transition-colors flex items-center gap-1 cursor-pointer">
+                        Portfolio <span class="text-[10px]">▼</span>
+                    </button>
+
+                    <div id="dropdown-portfolio"
+                        class="absolute top-full left-0 w-56 bg-white shadow-2xl shadow-black/10 ring-1 ring-black/5 rounded-md transition-all duration-200 opacity-0 invisible">
+
+                        <div class="relative">
+                            <button id="btn-product"
+                                class="w-full flex justify-between items-center px-4 py-3 text-black hover:text-black text-sm font-medium no-underline hover:bg-gray-50 cursor-pointer transition-colors">
+                                Product Design <span class="text-[10px]">▼</span>
+                            </button>
+                            <div id="sub-product" class="hidden bg-gray-50/50">
+                                <a href="/tigerair/index.html"
+                                    class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm transition-colors">Tigerair
+                                    Card Upgrade</a>
+                                <a href="/campaign/index.html"
+                                    class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm transition-colors">Rakuten
+                                    Campaign Page</a>
+                                <a href="/bill/index.html"
+                                    class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm transition-colors">App
+                                    Bill Installment Feature</a>
+                                <a href="/health/index.html"
+                                    class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm transition-colors">MediaTek
+                                    Health App</a>
+                            </div>
+                        </div>
+
+                        <a href="/portfolio/graphic-design"
+                            class="block px-4 py-3 text-black hover:text-black text-sm font-medium no-underline hover:bg-gray-50 transition-colors">
+                            Graphic Design
+                        </a>
+                    </div>
+                </div>
+
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
+                    class="flex h-full items-center font-medium text-black text-base no-underline hover:text-gray-600 transition-colors">
+                    Resume
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Rakuten Card Campaign Page: <br>UI/UX Redesign & Front-end Development</h1>
+            <div style="margin: 20px 0;">
+                <span class="tag">UI/UX Design</span>
+                <span class="tag">Front-end Development</span>
+            </div>
+            <div class="top_card"><img src="images/home.jpg" alt=""></div>
+            <p style="max-width: 650px;margin: 12px auto;text-align: left;color: #333;">
+                I redesigned the campaign page to make key offers easier to discover, simplify content browsing, and
+                create space for new business campaigns. I also implemented responsive layouts and interactive carousels
+                using HTML, CSS, JavaScript, and Swiper.js.
+            </p>
+            <ul>
+                <li><strong>My Role: </strong>Visual Designer,
+                    UI/UX Designer, and Front-end Developer
+                    (HTML/CSS/JS).
+                </li>
+                <li><strong>Goal: </strong>Improve campaign visibility, simplify content discovery, and support business
+                    objectives through a clearer information architecture.</li>
+            </ul>
+            <div class="project-footer">
+                <a href="https://www.card.rakuten.com.tw/corp/campaign/" target="_blank" rel="noopener noreferrer"
+                    class="portfolio-btn">
+                    🚀 See It in Action
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="contributions" style="opacity: 0; transform: translateY(20px); transition: 0.8s ease-out;">
+        <div class="container">
+            <h2 class="section-title">Core Contributions & Impact</h2>
+
+            <div class="compare-section reveal">
+                <h3 class="compare-title">1. Boosting Campaign Visibility: Text Links → Featured Banner Carousel</h3>
+                <div class="compare-grid">
+                    <div class="compare-card before">
+                        <div class="card-badge"><i class="fa-solid fa-circle-xmark"></i> Legacy Issue</div>
+                        <p>Featured campaigns were displayed as a basic list of text links at the top of the page,
+                            limiting their visual impact and making them less prominent.</p>
+                        <img src="images/hot.jpg" alt="">
+                    </div>
+                    <div class="compare-arrow">
+                        <i class="fa-solid fa-arrow-right-long desktop-arrow"></i>
+                        <i class="fa-solid fa-arrow-down-long mobile-arrow"></i>
+                    </div>
+                    <div class="compare-card after">
+                        <div class="card-badge success"><i class="fa-solid fa-circle-check"></i> My Solution</div>
+                        <p>I redesigned the section as <strong>a full-width, responsive banner carousel using
+                                Swiper.js</strong>, giving
+                            key campaigns greater visual prominence and making them easier to discover.
+                        </p>
+                        <img src="images/Carousel.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="compare-section reveal">
+                <h3 class="compare-title">2. Simplifying Offer Discovery: Manual Filtering → Card Issuer Hubs</h3>
+                <div class="compare-grid">
+    
+                    <div class="compare-card before">
+                        <div class="card-badge"><i class="fa-solid fa-circle-xmark"></i> Legacy Issue</div>
+                        <p>Users had to manually filter card types to find relevant offers. At the bottom of the page,
+                            card issuer logos served only as links to separate offer pages, requiring extra clicks to
+                            discover exclusive campaigns.</p>
+                        <img src="images/filter.jpg" style="height: 190px;" alt="">
+                    </div>
+              
+                    <div class="compare-arrow">
+                        <i class="fa-solid fa-arrow-right-long desktop-arrow"></i>
+                        <i class="fa-solid fa-arrow-down-long mobile-arrow"></i>
+                    </div>
+                
+                    <div class="compare-card after">
+                        <div class="card-badge success"><i class="fa-solid fa-circle-check"></i> My Solution</div>
+                        <p>I removed the manual card-filtering function and reorganized offers into dedicated Visa,
+                            Mastercard, and JCB sections, <strong>displaying each issuer’s exclusive campaigns directly
+                                beneath
+                                its logo for easier browsing</strong>.
+                        </p>
+                        <img src="images/categories.jpg" style="height: 190px;" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="compare-section reveal">
+                <h3 class="compare-title">3. Optimizing Page Architecture: Long Campaign Grid → Compact Layout with
+                    Dedicated Offer Sections
+                </h3>
+                <div class="compare-grid">
+                    <div class="compare-card before">
+                        <div class="card-badge"><i class="fa-solid fa-circle-xmark"></i> Legacy Issue</div>
+                        <p style="min-height: 250px;">The original page displayed dozens of campaign cards in a long
+                            grid, creating excessive scrolling and pushing lower-page content out of view. It also
+                            lacked dedicated sections for key business initiatives, including Japan travel perks and the
+                            MGM Referral Program.</p>
+                        <img src="images/before.png" alt="">
+                    </div>
+                    <div class="compare-arrow">
+                        <i class="fa-solid fa-arrow-right-long desktop-arrow"></i>
+                        <i class="fa-solid fa-arrow-down-long mobile-arrow"></i>
+                    </div>
+                    <div class="compare-card after">
+                        <div class="card-badge success"><i class="fa-solid fa-circle-check"></i> My Solution</div>
+                        <p style="min-height: 250px;">I redesigned the campaign grid to <strong>display two rows at a
+                                time and
+                                integrated a Swiper carousel for additional campaigns</strong>. This reduced vertical
+                            content density
+                            and freed up space for dedicated <strong>Japan Travel Perks</strong> and <strong>MGM
+                                Referral Program</strong> sections,
+                            balancing campaign visibility with efficient use of page space.
+                        </p>
+                        <img src="images/pc_home.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section class="contributions" style="opacity: 0; transform: translateY(20px); transition: 0.8s ease-out;">
+        <div class="container">
+            <h2 class="section-title">Featured Campaign Pages<br>
+                <p style="padding-top: 16px;font-size: 16px;font-weight: 400;">
+                    Selected campaign pages demonstrating my visual design, interaction design, and front-end
+                    implementation
+                    skills.
+                <p>
+            </h2>
+
+            <div class="tab-container">
+                <div class="tab-navigation">
+                    <div class="tab-btn active" data-tab="tab-japan">Latest promotional campaign</div>
+                    <div class="tab-btn" data-tab="tab-double11">Japan benefits campaign</div>
+                </div>
+
+                <div class="tab-panel active" id="tab-japan">
+                    <div class="panel-layout">
+                        <div class="panel-preview">
+                            <div class="mockup-body">
+                                <a href="https://www.card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=1898"
+                                    target="_blank">
+                                    <img src="https://image.card.tw.r10s.com/images/corp/campaign/1898/banner/710x310.jpg"
+                                        style="margin-top: 0;"></a>
+                                <div class="camp-content-sim">
+                                    <div class="panel-info">
+                                        <h3>Overseas Transaction Fee Rebate Campaign Page</h3>
+                                        <ul class="feature-list">
+                                            <li><strong>Visual Design & Benefit Communication:</strong>Used Tigerair's
+                                                brand mascot and airplane icons to highlight eligible destinations and
+                                                communicate overseas transaction fee rebates in an engaging
+                                                travel-themed design.</li>
+                                            <li><strong>Interactive Navigation & CTAs:</strong>Implemented JavaScript
+                                                interactions and smooth anchor navigation to help users explore offer
+                                                details and reach key actions.</li>
+                                        </ul>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-preview">
+                            <div class="mockup-body">
+                                <a href="https://www.card.rakuten.com.tw/corp/campaign/cpn.xhtml?code=2239"
+                                    target="_blank">
+                                    <img src="https://image.card.tw.r10s.com/images/corp/campaign/2239/banner/710x310.jpg"
+                                        style="margin-top: 0;"></a>
+                                <div class="camp-content-sim">
+                                    <div class="panel-info">
+                                        <h3>Rakuten Global Express Campaign Page</h3>
+                                        <ul class="feature-list">
+                                            <li><strong>Visual Hierarchy & Benefit
+                                                    Communication:</strong><br>Highlighted
+                                                the 2% Rakuten Points reward for Japan purchases and key international
+                                                forwarding benefits through clear content hierarchy.</li>
+                                            <li><strong>Service Integration & Navigation:</strong><br>Added direct links
+                                                to
+                                                Rakuten Global Express and relevant service resources to help users
+                                                continue their overseas shopping journey.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="tab-double11">
+                    <div class="panel-layout">
+
+                        <div class="panel-preview">
+                            <div class="mockup-body">
+                                <a href="https://www.card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=2406"
+                                    target="_blank">
+                                    <img src="https://image.card.tw.r10s.com/images/corp/campaign/2406/banner/710x310.jpg"
+                                        style="margin-top: 0;"></a>
+                                <div class="camp-content-sim">
+                                    <div class="panel-info">
+                                        <h3>TOKYU Department Store Campaign Page</h3>
+                                        <ul class="feature-list">
+                                            <li><strong>Retail Benefits & Visual Design:</strong><br>Highlighted the
+                                                exclusive 5% shopping discount through retail-focused visuals and clear
+                                                offer presentation.</li>
+                                            <li><strong>Information Architecture & Store
+                                                    Navigation:</strong><br>Organized
+                                                multi-location store information and redemption steps to help users find
+                                                relevant locations and understand how to use the offer.</li>
+                                        </ul>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-preview">
+                            <div class="mockup-body">
+                                <a href="https://www.card.rakuten.com.tw/corp/japan-benefit/store.xhtml?code=2427"
+                                    target="_blank">
+                                    <img src="https://image.card.tw.r10s.com/images/corp/campaign/2427/banner/710x310.jpg"
+                                        style="margin-top: 0;"></a>
+                                <div class="camp-content-sim">
+                                    <div class="panel-info">
+                                        <h3>Hilton Garden Inn Kyoto Shijo Karasuma Campaign Page</h3>
+                                        <ul class="feature-list">
+                                            <li><strong>Hotel Benefits & Visual Design:</strong><br>Highlighted the
+                                                exclusive 10% accommodation discount using hotel imagery to reinforce
+                                                the offer and its travel appeal.</li>
+                                            <li><strong>Information Hierarchy & Booking Guidance:</strong><br>Structured
+                                                booking requirements and redemption steps to help users understand the
+                                                offer and proceed with reservations.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="outcome" class="outcome"
+        style="border-bottom: none; opacity: 0; transform: translateY(20px); transition: 0.8s ease-out;">
+        <div class="container">
+            <h2 class="section-title">Outcome & Technical Implementation</h2>
+            <div class="badge-grid">
+                <div class="badge-card">
+                    <ul class="feature-list">
+                        <li><strong>A More Structured Campaign Experience
+                            </strong><br>The redesigned page organizes campaigns into clearer sections, gives
+                            featured
+                            offers greater visibility, and creates dedicated space for additional business initiatives.
+                            The
+                            carousel-based layout also provides a more compact way to browse campaigns without
+                            displaying
+                            every item at once.</li>
+                        <li><strong>Maintainable & Responsive Front-end</strong><br>I used shared CSS styles and
+                            consistent
+                            JavaScript breakpoints to manage responsive layouts and Swiper configurations across screen
+                            sizes. This reduced redundant media queries and made the front-end code easier to maintain
+                            and
+                            update.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-footer">
+        <a href="https://www.card.rakuten.com.tw/corp/campaign/" target="_blank" rel="noopener noreferrer"
+            class="portfolio-btn">
+            🚀 See It in Action
+        </a>
+    </div>
+    <footer style="padding: 50px 0; background: var(--light); text-align: center;">
+        <p>© 2026 Case Study. Designed & Developed by YI TING.</p>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    
+            const container = document.getElementById('nav-portfolio-container');
+            const btnPortfolio = document.getElementById('btn-portfolio');
+            const dropdownPortfolio = document.getElementById('dropdown-portfolio');
+
+            const btnProduct = document.getElementById('btn-product');
+            const subProduct = document.getElementById('sub-product');
+
+            const btnGraphic = document.getElementById('btn-graphic');
+            const subGraphic = document.getElementById('sub-graphic');
+
+       
+            function openMainMenu() {
+                dropdownPortfolio.classList.remove('opacity-0', 'invisible');
+                dropdownPortfolio.classList.add('opacity-100', 'visible');
+            }
+
+          
+            function closeAllMenus() {
+                dropdownPortfolio.classList.remove('opacity-100', 'visible');
+                dropdownPortfolio.classList.add('opacity-0', 'invisible');
+                subProduct.classList.add('hidden');
+                subGraphic.classList.add('hidden');
+            }
+
+    
+            btnPortfolio.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (dropdownPortfolio.classList.contains('opacity-0')) {
+                    openMainMenu();
+                } else {
+                    closeAllMenus();
+                }
+            });
+
+            container.addEventListener('mouseenter', function () {
+                openMainMenu();
+            });
+
+            container.addEventListener('mouseleave', function () {
+                closeAllMenus();
+            });
+
+
+            btnProduct.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                subProduct.classList.toggle('hidden');
+                subGraphic.classList.add('hidden'); 
+            });
+
+            btnGraphic.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                subGraphic.classList.toggle('hidden');
+                subProduct.classList.add('hidden'); 
+            });
+
+           
+            document.addEventListener('click', function (e) {
+                if (!container.contains(e.target)) {
+                    closeAllMenus();
+                }
+            });
+        });
+    </script>
+    <script>
+        (() => {
+            const navbar = document.getElementById('site-navbar');
+
+            if (!navbar) return;
+
+            let lastScrollY = Math.max(0, window.scrollY);
+
+            window.addEventListener(
+                'scroll',
+                () => {
+                    const currentScrollY = Math.max(0, window.scrollY);
+                    const scrollingDown = currentScrollY > lastScrollY;
+
+                    navbar.style.transform =
+                        scrollingDown && currentScrollY > 80
+                            ? 'translateY(-100%)'
+                            : 'translateY(0)';
+
+                    lastScrollY = currentScrollY;
+                },
+                { passive: true }
+            );
+        })();
+    </script>
+    <script>
+    
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = "0";
+            section.style.transform = "translateY(20px)";
+            section.style.transition = "all 0.8s ease-out";
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+         
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.getAttribute('data-tab');
+
+                  
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    tabPanels.forEach(panel => panel.classList.remove('active'));
+
+             
+                    button.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
