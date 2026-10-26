@@ -18,58 +18,86 @@
     <link href="/css/common.css" rel="stylesheet">
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    
-    <nav id="site-navbar"
+
+    <nav id="site-navbar" aria-label="Main navigation"
         class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-transform duration-300 font-sans">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-start items-center gap-12">
-           
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex justify-start items-center gap-12">
+
             <a href="/" class="font-bold text-xl text-black no-underline hover:text-gray-600 transition-colors">
-                首頁
+                Home
             </a>
 
-            <div class="flex h-full space-x-8">
+            <div class="flex h-full gap-12">
 
+                <!-- Portfolio：點擊展開 -->
                 <div id="nav-portfolio-container" class="relative flex h-full items-center">
-                    <button id="btn-portfolio"
-                        class="font-medium text-black text-base no-underline hover:text-gray-600 transition-colors flex items-center gap-1 cursor-pointer">
-                        Portfolio <span class="text-[10px]">▼</span>
+                    <button id="btn-portfolio" type="button" aria-expanded="false" aria-controls="dropdown-portfolio"
+                        class="font-medium text-black text-base hover:text-gray-600 transition-colors flex items-center gap-1 cursor-pointer">
+                        Portfolio
+                        <span id="arrow-portfolio" aria-hidden="true" class="text-[10px] transition-transform">▼</span>
                     </button>
 
                     <div id="dropdown-portfolio"
-                        class="absolute top-full left-0 w-56 bg-white shadow-2xl shadow-black/10 ring-1 ring-black/5 rounded-md transition-all duration-200 opacity-0 invisible">
+                        class="hidden absolute top-full left-0 w-56 bg-white shadow-lg rounded-md border border-gray-100">
+                        <!-- Product Design：點擊展開 -->
+                        <button id="btn-product" type="button" aria-expanded="false" aria-controls="sub-product"
+                            class="w-full flex justify-between items-center px-4 py-3 text-black text-sm font-medium hover:bg-gray-50 cursor-pointer">
+                            Product Design
+                            <span id="arrow-product" aria-hidden="true"
+                                class="text-[10px] transition-transform">▼</span>
+                        </button>
 
-                        <div class="relative">
-                            <button id="btn-product"
-                                class="w-full flex justify-between items-center px-4 py-3 text-black hover:text-black text-sm font-medium no-underline hover:bg-gray-50 cursor-pointer transition-colors">
-                                Product Design <span class="text-[10px]">▼</span>
-                            </button>
-                            <div id="sub-product" class="hidden bg-gray-50/50">
-                                <a href="/tigerair/index.html"
-                                    class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm transition-colors">Tigerair
-                                    Card Upgrade</a>
-                                <a href="/campaign/index.html"
-                                    class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm transition-colors">Rakuten
-                                    Campaign Page</a>
-                                <a href="/bill/index.html"
-                                    class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm transition-colors">App
-                                    Bill Installment Feature</a>
-                                <a href="/health/index.html"
-                                    class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm transition-colors">MediaTek
-                                    Health App</a>
-                            </div>
+                        <div id="sub-product" class="hidden bg-gray-50/50">
+                            <a href="/tigerair/index.html"
+                                class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm">
+                                Tigerair Card Upgrade
+                            </a>
+
+                            <a href="/campaign-page/index.html"
+                                class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm">
+                                Rakuten Card Campaign Page
+                            </a>
+
+                            <a href="/bill/index.html"
+                                class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm">
+                                App Bill Installment Optimization
+                            </a>
+
+                            <a href="/health/index.html"
+                                class="block pl-8 pr-4 py-2.5 text-black hover:text-black no-underline hover:bg-gray-100 text-sm">
+                                MediaTek Health App
+                            </a>
                         </div>
 
+                        <!-- Graphic Design：直接跳轉 -->
                         <a href="/portfolio/graphic-design"
-                            class="block px-4 py-3 text-black hover:text-black text-sm font-medium no-underline hover:bg-gray-50 transition-colors">
+                            class="block px-4 py-3 text-black hover:text-black text-sm font-medium no-underline hover:bg-gray-50">
                             Graphic Design
                         </a>
                     </div>
                 </div>
 
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"
-                    class="flex h-full items-center font-medium text-black text-base no-underline hover:text-gray-600 transition-colors">
-                    Resume
-                </a>
+                <!-- Resume：點擊展開 -->
+                <div id="nav-resume-container" class="relative flex h-full items-center">
+                    <button id="btn-resume" type="button" aria-expanded="false" aria-controls="dropdown-resume"
+                        class="font-medium text-black text-base hover:text-gray-600 transition-colors flex items-center gap-1 cursor-pointer">
+                        Resume
+                        <span id="arrow-resume" aria-hidden="true" class="text-[10px] transition-transform">▼</span>
+                    </button>
+
+                    <div id="dropdown-resume"
+                        class="hidden absolute top-full right-0 sm:right-auto sm:left-0 w-36 bg-white shadow-lg rounded-md border border-gray-100 overflow-hidden">
+                        <a href="/resume-en.pdf" target="_blank" rel="noopener noreferrer"
+                            class="block px-4 py-3 text-black hover:text-black no-underline hover:bg-gray-50 text-sm">
+                            English
+                        </a>
+
+                        <a href="/resume-zh.pdf" target="_blank" rel="noopener noreferrer"
+                            class="block px-4 py-3 text-black hover:text-black no-underline hover:bg-gray-50 text-sm">
+                            中文
+                        </a>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -393,103 +421,220 @@ initCampaignAnimations();
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-         
-            const container = document.getElementById('nav-portfolio-container');
-            const btnPortfolio = document.getElementById('btn-portfolio');
-            const dropdownPortfolio = document.getElementById('dropdown-portfolio');
-
-            const btnProduct = document.getElementById('btn-product');
-            const subProduct = document.getElementById('sub-product');
-
-            const btnGraphic = document.getElementById('btn-graphic');
-            const subGraphic = document.getElementById('sub-graphic');
-
-          
-            function openMainMenu() {
-                dropdownPortfolio.classList.remove('opacity-0', 'invisible');
-                dropdownPortfolio.classList.add('opacity-100', 'visible');
-            }
-
-        
-            function closeAllMenus() {
-                dropdownPortfolio.classList.remove('opacity-100', 'visible');
-                dropdownPortfolio.classList.add('opacity-0', 'invisible');
-                subProduct.classList.add('hidden');
-                subGraphic.classList.add('hidden');
-            }
-
-     
-            btnPortfolio.addEventListener('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                if (dropdownPortfolio.classList.contains('opacity-0')) {
-                    openMainMenu();
-                } else {
-                    closeAllMenus();
-                }
-            });
-
-        
-            container.addEventListener('mouseenter', function () {
-                openMainMenu();
-            });
-
-            container.addEventListener('mouseleave', function () {
-                closeAllMenus();
-            });
-
-
-            btnProduct.addEventListener('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                subProduct.classList.toggle('hidden');
-                subGraphic.classList.add('hidden'); 
-            });
-
-            
-            btnGraphic.addEventListener('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                subGraphic.classList.toggle('hidden');
-                subProduct.classList.add('hidden'); 
-            });
-
-          
-            document.addEventListener('click', function (e) {
-                if (!container.contains(e.target)) {
-                    closeAllMenus();
-                }
-            });
-        });
-    </script>
-    <script>
         (() => {
-            const navbar = document.getElementById('site-navbar');
+            function initNavbar() {
+                const navbar = document.getElementById('site-navbar');
 
-            if (!navbar) return;
+                if (!navbar) return;
 
-            let lastScrollY = Math.max(0, window.scrollY);
+                const portfolioContainer =
+                    document.getElementById('nav-portfolio-container');
+                const btnPortfolio =
+                    document.getElementById('btn-portfolio');
+                const dropdownPortfolio =
+                    document.getElementById('dropdown-portfolio');
+                const arrowPortfolio =
+                    document.getElementById('arrow-portfolio');
 
-            window.addEventListener(
-                'scroll',
-                () => {
-                    const currentScrollY = Math.max(0, window.scrollY);
-                    const scrollingDown = currentScrollY > lastScrollY;
+                const btnProduct =
+                    document.getElementById('btn-product');
+                const subProduct =
+                    document.getElementById('sub-product');
+                const arrowProduct =
+                    document.getElementById('arrow-product');
 
-                    navbar.style.transform =
-                        scrollingDown && currentScrollY > 80
+                const resumeContainer =
+                    document.getElementById('nav-resume-container');
+                const btnResume =
+                    document.getElementById('btn-resume');
+                const dropdownResume =
+                    document.getElementById('dropdown-resume');
+                const arrowResume =
+                    document.getElementById('arrow-resume');
+
+                if (
+                    !portfolioContainer || !btnPortfolio ||
+                    !dropdownPortfolio || !arrowPortfolio ||
+                    !btnProduct || !subProduct || !arrowProduct ||
+                    !resumeContainer || !btnResume ||
+                    !dropdownResume || !arrowResume
+                ) return;
+
+                // 同步顯示狀態、無障礙屬性與箭頭
+                function setExpanded(button, panel, arrow, open) {
+                    button.setAttribute('aria-expanded', String(open));
+                    panel.classList.toggle('hidden', !open);
+                    arrow.classList.toggle('rotate-180', open);
+                }
+
+                function setProductOpen(open) {
+                    setExpanded(
+                        btnProduct,
+                        subProduct,
+                        arrowProduct,
+                        open
+                    );
+                }
+
+                function closePortfolio() {
+                    setExpanded(
+                        btnPortfolio,
+                        dropdownPortfolio,
+                        arrowPortfolio,
+                        false
+                    );
+
+                    setProductOpen(false);
+                }
+
+                function closeResume() {
+                    setExpanded(
+                        btnResume,
+                        dropdownResume,
+                        arrowResume,
+                        false
+                    );
+                }
+
+                function closeAllMenus() {
+                    closePortfolio();
+                    closeResume();
+                }
+
+                // Portfolio：點擊開關，並關閉 Resume
+                btnPortfolio.addEventListener('click', () => {
+                    const willOpen =
+                        btnPortfolio.getAttribute('aria-expanded') !== 'true';
+
+                    closeAllMenus();
+
+                    if (willOpen) {
+                        setExpanded(
+                            btnPortfolio,
+                            dropdownPortfolio,
+                            arrowPortfolio,
+                            true
+                        );
+                    }
+                });
+
+                // Product Design：點擊展開／收合
+                btnProduct.addEventListener('click', () => {
+                    const willOpen =
+                        btnProduct.getAttribute('aria-expanded') !== 'true';
+
+                    setProductOpen(willOpen);
+                });
+
+                // Resume：點擊開關，並關閉 Portfolio
+                btnResume.addEventListener('click', () => {
+                    const willOpen =
+                        btnResume.getAttribute('aria-expanded') !== 'true';
+
+                    closeAllMenus();
+
+                    if (willOpen) {
+                        setExpanded(
+                            btnResume,
+                            dropdownResume,
+                            arrowResume,
+                            true
+                        );
+                    }
+                });
+
+                // 點擊 Navbar 外部：收合全部
+                document.addEventListener('pointerdown', (event) => {
+                    if (!navbar.contains(event.target)) {
+                        closeAllMenus();
+                    }
+                });
+
+                // 點擊任一連結：收合全部
+                navbar.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', closeAllMenus);
+                });
+
+                // 鍵盤焦點離開個別選單：收合該選單
+                portfolioContainer.addEventListener('focusout', (event) => {
+                    if (!portfolioContainer.contains(event.relatedTarget)) {
+                        closePortfolio();
+                    }
+                });
+
+                resumeContainer.addEventListener('focusout', (event) => {
+                    if (!resumeContainer.contains(event.relatedTarget)) {
+                        closeResume();
+                    }
+                });
+
+                // Escape：收合並將焦點還原至主按鈕
+                portfolioContainer.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape') {
+                        event.preventDefault();
+                        btnPortfolio.focus();
+                        closePortfolio();
+                    }
+                });
+
+                resumeContainer.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape') {
+                        event.preventDefault();
+                        btnResume.focus();
+                        closeResume();
+                    }
+                });
+
+                // 向下捲動隱藏，向上捲動顯示
+                let lastScrollY = Math.max(0, window.scrollY);
+
+                window.addEventListener(
+                    'scroll',
+                    () => {
+                        const currentScrollY = Math.max(0, window.scrollY);
+
+                        const shouldHide =
+                            currentScrollY > lastScrollY &&
+                            currentScrollY > 80;
+
+                        if (shouldHide) {
+                            closeAllMenus();
+
+                            if (
+                                document.activeElement instanceof HTMLElement &&
+                                navbar.contains(document.activeElement)
+                            ) {
+                                document.activeElement.blur();
+                            }
+                        }
+
+                        navbar.style.transform = shouldHide
                             ? 'translateY(-100%)'
                             : 'translateY(0)';
 
-                    lastScrollY = currentScrollY;
-                },
-                { passive: true }
-            );
+                        navbar.style.visibility = shouldHide
+                            ? 'hidden'
+                            : 'visible';
+
+                        lastScrollY = currentScrollY;
+                    },
+                    { passive: true }
+                );
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener(
+                    'DOMContentLoaded',
+                    initNavbar,
+                    { once: true }
+                );
+            } else {
+                initNavbar();
+            }
         })();
     </script>
     <script>
-   
+
         document.querySelectorAll('section').forEach(section => {
             section.style.opacity = "0";
             section.style.transform = "translateY(20px)";
