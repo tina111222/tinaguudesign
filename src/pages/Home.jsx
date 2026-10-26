@@ -47,11 +47,13 @@ export default function Home() {
 
       {/* 區塊 1：自我介紹 (RWD: 手機上下，桌機左右) */}
       <section className="flex flex-col md:flex-row items-center gap-12 mb-24">
-        <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
+        <div className="mx-auto h-56 w-56 shrink-0 overflow-hidden rounded-full shadow-lg sm:h-64 sm:w-64">
           <img
-            src="/images/profile.jpg"
-            alt="My Profile"
-            className="w-full h-full object-cover rounded-full shadow-lg"
+            src="/images/profile.png"
+            alt="Tina Guu"
+            width={1024}
+            height={1024}
+            className="block h-full w-full object-cover object-center"
           />
         </div>
         <div className="flex-1 text-left md:text-left">
@@ -67,7 +69,7 @@ export default function Home() {
 
           {/* 原本的自我介紹 (加上 mb-8 推開與下方聯絡資訊的距離) */}
           <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            I’m a UI/UX Designer with a visual design background and front-end development skills. <br/>I turn complex information into intuitive experiences, combining thoughtful design with code to bring ideas to life.
+            I’m a UI/UX Designer with a visual design background and front-end development skills. <br />I turn complex information into intuitive experiences, combining thoughtful design with code to bring ideas to life.
           </p>
 
           {/* 新增的聯絡資訊 */}
