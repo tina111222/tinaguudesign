@@ -5,15 +5,26 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
+  const [resumeOpen, setResumeOpen] = useState(false);
 
   const lastScrollY = useRef(0);
-  const portfolioRef = useRef(null);
+
+  // 包住整個 Navbar，用於判斷是否點擊外部
+  const navbarRef = useRef(null);
+  const portfolioButtonRef = useRef(null);
+  const resumeButtonRef = useRef(null);
 
   const location = useLocation();
+
+  const closePortfolio = () => {
+    setPortfolioOpen(false);
+    setProductOpen(false);
+  };
 
   const closeMenu = () => {
     setPortfolioOpen(false);
     setProductOpen(false);
+    setResumeOpen(false);
   };
 
   // 向下捲動隱藏 Navbar，向上捲動顯示
@@ -22,6 +33,7 @@ export default function Navbar() {
 
     const handleScroll = () => {
       const currentScrollY = Math.max(0, window.scrollY);
+
       const shouldHide =
         currentScrollY > lastScrollY.current &&
         currentScrollY > 80;
@@ -31,6 +43,15 @@ export default function Navbar() {
       if (shouldHide) {
         setPortfolioOpen(false);
         setProductOpen(false);
+        setResumeOpen(false);
+
+        // 避免鍵盤焦點留在隱藏的 Navbar 內
+        if (
+          document.activeElement instanceof HTMLElement &&
+          navbarRef.current?.contains(document.activeElement)
+        ) {
+          document.activeElement.blur();
+        }
       }
 
       lastScrollY.current = currentScrollY;
@@ -45,21 +66,23 @@ export default function Navbar() {
     };
   }, []);
 
-  // 切換 React 頁面後收合選單
+  // 切換 React 頁面後收合所有選單
   useEffect(() => {
     setPortfolioOpen(false);
     setProductOpen(false);
-  }, [location.pathname]);
+    setResumeOpen(false);
+  }, [location.pathname, location.search, location.hash]);
 
-  // 點擊選單外部時收合
+  // 點擊 Navbar 外部時收合所有選單
   useEffect(() => {
     const handlePointerDown = (event) => {
       if (
-        portfolioRef.current &&
-        !portfolioRef.current.contains(event.target)
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target)
       ) {
         setPortfolioOpen(false);
         setProductOpen(false);
+        setResumeOpen(false);
       }
     };
 
@@ -75,12 +98,15 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 z-50 w-full bg-white/90
-        font-sans shadow-sm backdrop-blur-md
+      ref={navbarRef}
+      aria-label="Main navigation"
+      style={!isVisible ? { visibility: 'hidden' } : undefined}
+      className={`fixed top-0 left-0 z-50 w-full
+        bg-white/90 font-sans shadow-sm backdrop-blur-md
         transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-start gap-12 px-6">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-start gap-12 px-4 sm:px-6">
         <Link
           to="/"
           onClick={closeMenu}
@@ -89,45 +115,43 @@ export default function Navbar() {
           Home
         </Link>
 
-        <div className="flex h-full space-x-8">
+        <div className="flex h-full gap-12">
+          {/* Portfolio */}
           <div
-            ref={portfolioRef}
             className="relative flex h-full items-center"
-            onMouseEnter={() => setPortfolioOpen(true)}
-            onMouseLeave={closeMenu}
             onBlur={(event) => {
               if (
                 !event.currentTarget.contains(event.relatedTarget)
               ) {
-                closeMenu();
+                closePortfolio();
               }
             }}
             onKeyDown={(event) => {
               if (event.key === 'Escape') {
                 event.preventDefault();
-
-                // 先還原焦點，再關閉選單
-                portfolioRef.current
-                  ?.querySelector('#btn-portfolio-react')
-                  ?.focus();
-
-                closeMenu();
+                portfolioButtonRef.current?.focus();
+                closePortfolio();
               }
             }}
           >
             <button
-              id="btn-portfolio-react"
+              ref={portfolioButtonRef}
               type="button"
               aria-expanded={portfolioOpen}
               aria-controls="dropdown-portfolio-react"
               onClick={() => {
                 setPortfolioOpen((prev) => !prev);
                 setProductOpen(false);
+                setResumeOpen(false);
               }}
               className="flex cursor-pointer items-center gap-1 text-base font-medium text-black transition-colors hover:text-gray-600"
             >
               Portfolio
-              <span className="text-[10px]" aria-hidden="true">
+              <span
+                aria-hidden="true"
+                className={`text-[10px] transition-transform ${portfolioOpen ? 'rotate-180' : ''
+                  }`}
+              >
                 ▼
               </span>
             </button>
@@ -171,7 +195,7 @@ export default function Navbar() {
                     </a>
 
                     <a
-                      href="/campaign/index.html"
+                      href="/campaign-page/index.html"
                       onClick={closeMenu}
                       className="block py-2.5 pl-8 pr-4 text-sm text-black no-underline hover:bg-gray-100"
                     >
@@ -196,7 +220,7 @@ export default function Navbar() {
                   </div>
                 )}
 
-                {/* Graphic Design：點擊跳轉並收合 */}
+                {/* Graphic Design：直接跳轉 */}
                 <Link
                   to="/portfolio/graphic-design"
                   onClick={closeMenu}
@@ -208,15 +232,72 @@ export default function Navbar() {
             )}
           </div>
 
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={closeMenu}
-            className="flex h-full items-center text-base font-medium text-black no-underline transition-colors hover:text-gray-600"
+          {/* Resume：點擊展開 */}
+          <div
+            className="relative flex h-full items-center"
+            onBlur={(event) => {
+              if (
+                !event.currentTarget.contains(event.relatedTarget)
+              ) {
+                setResumeOpen(false);
+              }
+            }}
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') {
+                event.preventDefault();
+                resumeButtonRef.current?.focus();
+                setResumeOpen(false);
+              }
+            }}
           >
-            Resume
-          </a>
+            <button
+              ref={resumeButtonRef}
+              type="button"
+              aria-expanded={resumeOpen}
+              aria-controls="dropdown-resume-react"
+              onClick={() => {
+                setResumeOpen((prev) => !prev);
+                closePortfolio();
+              }}
+              className="flex cursor-pointer items-center gap-1 text-base font-medium text-black transition-colors hover:text-gray-600"
+            >
+              Resume
+              <span
+                aria-hidden="true"
+                className={`text-[10px] transition-transform ${resumeOpen ? 'rotate-180' : ''
+                  }`}
+              >
+                ▼
+              </span>
+            </button>
+
+            {resumeOpen && (
+              <div
+                id="dropdown-resume-react"
+                className="absolute right-0 top-full w-36 overflow-hidden rounded-md border border-gray-100 bg-white shadow-lg sm:right-auto sm:left-0"
+              >
+                <a
+                  href="/resume-en.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMenu}
+                  className="block px-4 py-3 text-sm text-black no-underline hover:bg-gray-50"
+                >
+                  English
+                </a>
+
+                <a
+                  href="/resume-zh.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMenu}
+                  className="block px-4 py-3 text-sm text-black no-underline hover:bg-gray-50"
+                >
+                  中文
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </nav>
